@@ -70,6 +70,8 @@ class _OnbordingWidgetState extends State<OnbordingWidget> {
                 children: [
                   Row(
                     mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment:
+                        (FFMainAxisAlignment.spaceBetween).flutterValue,
                     children: [
                       Text(
                         'Profile',
@@ -91,6 +93,19 @@ class _OnbordingWidgetState extends State<OnbordingWidget> {
                                       .headlineLarge
                                       .fontStyle,
                                 ),
+                      ),
+                      FlutterFlowIconButton(
+                        borderRadius: 8.0,
+                        buttonSize: 40.0,
+                        fillColor: FlutterFlowTheme.of(context).primary,
+                        icon: Icon(
+                          Icons.arrow_back,
+                          color: FlutterFlowTheme.of(context).info,
+                          size: 24.0,
+                        ),
+                        onPressed: () async {
+                          context.safePop();
+                        },
                       ),
                     ],
                   ),

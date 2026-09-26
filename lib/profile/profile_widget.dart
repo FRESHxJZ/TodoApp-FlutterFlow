@@ -2,6 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
 import '/flutter_flow/ff_builtin_enums.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -62,6 +63,8 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                 children: [
                   Row(
                     mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment:
+                        (FFMainAxisAlignment.spaceBetween).flutterValue,
                     children: [
                       Text(
                         'Profile',
@@ -83,6 +86,18 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                       .headlineLarge
                                       .fontStyle,
                                 ),
+                      ),
+                      FlutterFlowIconButton(
+                        borderRadius: 20.0,
+                        buttonSize: 50.0,
+                        icon: Icon(
+                          Icons.edit,
+                          color: FlutterFlowTheme.of(context).secondaryText,
+                          size: 30.0,
+                        ),
+                        onPressed: () async {
+                          context.pushNamed(OnbordingWidget.routeName);
+                        },
                       ),
                     ],
                   ),
